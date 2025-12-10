@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    
+}
+
+
+:root{
+        /* fonts */
+  --font:40px;
+  --afont:1rem;
+  --bfont:1.25rem;
+  --cfont:1.5rem;
+  --dfont:2rem;
+  /* buttons */
+  --aweight:500;
+  --bweightt:400;  
+  --border-radius:5px;
+  --padding:0.15rem;
+  --bpadding:0.2rem;
+  /* active button */
+  --position:relative;
+  --top:2px;
+  --black:black ;
+  --pointer: cursor ;
+  --actcolor: white ;
+  /* hover on button*/
+  --primaryash:#242724f8;
+  --hovcolor:white;
+  --pointer:cursor;
+  /* border */
+  --aborder: solid 1px black;
+  /* border radius */
+  --aradius:0.5rem;
+  --bradius:1rem;
+  /* letter spacing */
+  --aspacing:0.5rem;
+  --bspacing:1rem;
+  /*box shadow*/
+  box-shadow:2px 2px 3px black;
+}
+p{
+    font-size:var(--cfont);
+}
+.btn{
+    border-radius:6px;
+    font-weight:var(--aweight);
+    border:none;
+    box-sizing:border-box;
+    padding:6px;
+    font-size:var(--cfont);
+    background: black;
+    color:white;
+}
+.btn:active,.header-btn:active{
+    background: var(--black);
+    position:var(--position);
+    top:var(--top);
+    color:var(--actcolor);
+}
+.btn:hover,.header-btn:hover{
+    background: var(--primaryash);
+    cursor:var(--pointer);
+    color:var(--hovcolor);
+} 
+.site-title{
+    background: black;
+    color:white;
+    border-radius:var(--aradius);
+    padding:0.15rem;
+    box-sizing:border-box;
+}
+.site-title a{
+    color: white ;
+}
+.footer-container{
+    position:fixed;
+    bottom:0;
+    color:white;
+    background:black;
+    width: 100%;
+    padding:0.15rem 0.7rem;
+    text-align: center ;
+}
+
+/*
+---------------
+ body 
+---------------
+ */
+body {
+    background:url("weather.jpeg") no-repeat;
+    background-size:cover;
+    height:100vh;
+    line-height:1.6;
+    font-size:16px;
+}
+a{
+    text-decoration: none ;
+    color:black;
+}
+#site-container{
+    width:99vw;
+    margin:0 auto;
+}
+.header-container{
+    margin:0 auto 20px;
+    display :flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:row;
+    padding:5px;
+    width:99vw;
+}
+
+
+.header-links{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    overflow:hidden;
+    height:0;
+    margin:0 auto;
+    width: 95vw;
+}
+.show-links{
+display: block;
+height: auto;
+}contact{ 
+    font-weight:var(--aweight);
+    border:none;
+    padding:var(--padding);
+}
+.header-btn{
+    border:none;
+    font-size:var(--bfont);
+    border-radius:var(--border-radius);
+    font-weight:var(--aweight);
+    padding:var(--padding);
+    color :white;
+    background: black;
+}
+.header-link{
+    font-size:var(--bfont);
+    display : block;
+    border-top:solid 1px rgba(0,0,0,0.5);
+    padding: 1rem 0;
+    text-align: center;
+}
+.section-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align: center ;
+    align-items: center ;
+    padding:5px;
+}
+.section-buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    gap:6px;
+}
+small{
+    font-size:0.7em;
+}
+.media-center{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+
+}
+
+/* ---------------
+Login page
+--------------- */
+.login-container{
+    height:auto;
+    width :300px;
+    box-shadow:1px 1px 2px 1px black;
+    border:solid 1px black;
+    border-radius:5px;
+    padding:10px;
+    box-sizing: border-box;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-center{
+
+}
+small a.alternative{
+    font-size:var(--afont);
+}
+
+.form-container{
+    margin-top:40px;
+}
+ 
+ 
+label{
+    display :block;
+    font-size:var(--bfont);
+    margin-top:20px;
+    
+}
+input{
+    display:block;
+    border:solid 1px black;
+    border-radius:5px;
+    padding:5px;
+    width:260px;
+}
+#password{
+    border:none;
+    background: transparent;
+    outline:none;
+    margin-left:0;
+}
+.password{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: white;
+    padding:1px 2px 1px 1px;
+    width: 270px;
+    box-sizing:border-box;
+    border:solid 1px black;
+    border-radius:5px;  
+}
+.password:focus-within{
+    border-color: black;
+    box-shadow: 0 0 5px black;
+}
+.button-container{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-direction:column;
+   margin:40px auto 20px;
+   text-align:center;
+   gap:20px;
+}
+ .alternative{
+    color:black;
+}
+.alternative:active{
+    color:var(--actcolor);
+    background: var(--black);
+}
+@media screen and (min-width:768px){
+    #menu-toggle{
+        display: none;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+    }
+    .header-container{
+        display:block;
+        justify-content:space-around;
+        align-items: center;
+        flex-direction: row;
+        height:auto; 
+        margin:auto 0;
+        width: auto;
+    }
+    .header-links{
+        height: auto;
+        flex-direction:row;
+        justify-content: space-around;
+        width:auto;
+        align-items:center;
+        display:flex;
+        align-items: center;
+        margin-right: 0;
+        
+    }
+    .header-link{
+        border-top: none;
+        margin:0 1rem;
+        font-size: 1rem;
+        display: inline;
+        
+    }
+
+
+}
+/*------------------------
+sign-up page
+-------------------------*/
+.form_container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.form-center{
+    box-shadow:2px 2px black;
+    padding:3rem;
+    border:var(--aborder);
+    border-radius: var(--aradius);
+}
+.form-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+textarea{
+    resize: none;
+}
