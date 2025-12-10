@@ -190,9 +190,6 @@ Login page
     justify-content: center;
     align-items: center;
 }
-.login-center{
-
-}
 small a.alternative{
     font-size:var(--afont);
 }
